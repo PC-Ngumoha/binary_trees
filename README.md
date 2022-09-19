@@ -6,4 +6,7 @@ contains the function `binary_tree_node` which creates a new node on the binary 
 ### 1-binary_tree_insert_left.c
 contains the function `binary_tree_insert_left` which creates a new node and inserts it as the left child of another 'parent' node on the tree.
 
-###
+### 2-binary_tree_insert_right.c
+contains the function `binary_tree_insert_right` which creates a new node and inserts it as the right child of another 'parent' node on the tree.
+
+### 
