@@ -3,8 +3,8 @@
 
 
 /**
- * binary_tree_insert_left - creates & inserts a new node as the left child.
- * @parent: node whose left child we aim to create or update.
+ * binary_tree_insert_right - creates & inserts a new node as the right child.
+ * @parent: node whose right child we aim to create or update.
  * @value: value to be stored in the new node.
  *
  * Return: address of new node (Succeeds) or NULL (if failed)
