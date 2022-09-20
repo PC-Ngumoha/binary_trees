@@ -13,20 +13,23 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	while (tree != NULL)
+	else
 	{
-		if (tree->left != NULL) /* Does this node have a left child? */
+		while (tree != NULL)
 		{
-			tree = tree->left;
-			height++;
+			if (tree->left != NULL)
+			{
+				tree = tree->left;
+				height++;
+			}
+			else if (tree->right != NULL)
+			{
+				tree = tree->right;
+				height++;
+			}
+			else
+				tree = tree->left;
 		}
-		else if (tree->right != NULL) /* Does this node have a right child? */
-		{
-			tree = tree->right;
-			height++;
-		}
-		else
-			tree = tree->left;
+		return (height);
 	}
-	return (height);
 }
