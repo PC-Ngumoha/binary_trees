@@ -11,7 +11,7 @@ void binary_tree_delete(binary_tree_t *tree)
 {
 	/* If the root points to nothing at the beginning */
 	if (tree == NULL)
-			return;
+		return;
 
 	if (tree->right != NULL)
 	{
