@@ -12,4 +12,6 @@
 
 ### 5-binary_tree_is_leaf.c
 
-### 
+### 6-binary_tree_preorder.c
+
+###  
