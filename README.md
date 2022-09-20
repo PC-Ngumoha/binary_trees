@@ -18,4 +18,8 @@
 
 ### 8-binary_tree_postorder.c
 
-### 9-binary_tree_height.c  
+### 9-binary_tree_height.c 
+
+### 10-binary_tree_depth.c
+
+###  
