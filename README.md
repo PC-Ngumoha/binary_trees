@@ -14,4 +14,6 @@
 
 ### 6-binary_tree_preorder.c
 
-###  
+### 7-binary_tree_inorder.c
+
+###   
