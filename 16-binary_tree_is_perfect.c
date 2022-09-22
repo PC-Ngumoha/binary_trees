@@ -54,5 +54,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 	height = get_height(tree);
-	return check_is_perfect(tree, height, 0);
+	return (check_is_perfect(tree, height, 0));
 }
