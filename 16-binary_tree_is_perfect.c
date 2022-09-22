@@ -10,33 +10,35 @@
  */
 int get_height(const binary_tree_t *root)
 {
-	int left, right;
+	int height = 0;
 
-	if (!root)
-		return (0);
-	left = get_height(root->left);
-	right = get_height(root->right);
-	if (left >= right)
-		return (left + 1);
-	else
-		return (right + 1);
+	while (root)
+	{
+		root = root->left;
+		height++;
+	}
+	return (height);
 }
 
 /**
- * check_is_full - checks if binary tree is full.
+ * check_is_perfect - helps check if a binary tree is perfect.
  * @root: binary tree in question.
+ * @height: left height of the binary  tree.
+ * @level : level of the current node on the binary tree.
  *
  * Return: 1 or 0
  */
-int check_is_full(const binary_tree_t *root)
+int check_is_perfect(const binary_tree_t *root, int height, int level)
 {
 	if (!root)
 		return (0);
 	if (!(root->left) && !(root->right))
-		return (1);
-	if ((root->left) && (root->right))
-		return (check_is_full(root->left) && check_is_full(root->right));
-	return (0);
+		return (height == level + 1);
+	if (!(root->left) || !(root->right))
+		return (0);
+
+	return (check_is_perfect(root->left, height, level + 1) &&
+				check_is_perfect(root->right, height, level + 1));
 }
 
 /**
@@ -47,18 +49,10 @@ int check_is_full(const binary_tree_t *root)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int left_height, right_height;
-	int is_full;
+	int height;
 
 	if (!tree)
 		return (0);
-	left_height = get_height(tree->left);
-	right_height = get_height(tree->right);
-	if (left_height == right_height)
-	{
-		is_full = check_is_full(tree);
-		if (is_full == 1)
-			return (1);
-	}
-	return (0);
+	height = get_height(tree);
+	return check_is_perfect(tree, height, 0);
 }
