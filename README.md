@@ -32,4 +32,6 @@
 
 ### 15-binary_tree_is_full.c
 
+### 16-binary_tree_is_perfect.c
+
 ###    
